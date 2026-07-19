@@ -35,7 +35,7 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  addSubmission({
+  await addSubmission({
     name,
     email,
     storyIdea,

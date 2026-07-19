@@ -1087,13 +1087,29 @@ function SubmissionsTab({
         </p>
       ) : (
         <ul className="mt-5 space-y-4">
-          {submissions.map((s) => (
+           {submissions.map((s) => (
             <li key={s.id} className="rounded-xl bg-white/50 p-4">
               <div className="flex flex-wrap items-center justify-between gap-2">
                 <p className="font-heading text-ink">{s.name}</p>
-                <span className="text-xs text-ink-soft">
-                  {new Date(s.createdAt).toLocaleString()}
-                </span>
+                <div className="flex items-center gap-3">
+                  <span className="text-xs text-ink-soft">
+                    {new Date(s.createdAt).toLocaleString()}
+                  </span>
+                  <button
+                    type="button"
+                    onClick={async () => {
+                      await fetch("/api/submissions", {
+                        method: "DELETE",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({ id: s.id }),
+                      });
+                      setSubmissions(submissions.filter((x) => x.id !== s.id));
+                    }}
+                    className="text-xs text-rose hover:underline"
+                  >
+                    Delete
+                  </button>
+                </div>
               </div>
               <p className="text-sm text-ink-soft">{s.email}</p>
               <p className="mt-2 font-story text-lg text-ink">{s.storyIdea}</p>
