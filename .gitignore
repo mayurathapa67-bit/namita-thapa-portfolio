@@ -17,6 +17,9 @@
 /.next/
 /out/
 
+# runtime submissions (PII, generated at runtime)
+/data/submissions.json
+
 # production
 /build
 

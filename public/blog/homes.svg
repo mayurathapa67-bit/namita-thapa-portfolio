@@ -1,0 +1,17 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#B8A9C9"/>
+      <stop offset="50%" stop-color="#9CAF88"/>
+      <stop offset="100%" stop-color="#FFD93D"/>
+    </linearGradient>
+    <radialGradient id="r" cx="30%" cy="25%" r="80%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#g)"/>
+  <rect width="1200" height="800" fill="url(#r)"/>
+  <text x="50%" y="46%" font-family="Georgia, serif" font-size="86" fill="#1A1A1A" text-anchor="middle" opacity="0.85">Namita Thapa</text>
+  <text x="50%" y="56%" font-family="Georgia, serif" font-size="46" fill="#1A1A1A" text-anchor="middle" opacity="0.55">Musings</text>
+</svg>
